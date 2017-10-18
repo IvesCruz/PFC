@@ -35,103 +35,104 @@
         </header>
 
         <form class="col s12">
-            <h5> Características do produto a ser armazenado </h5>
-            <div class="input-field col s12">
-                <select>
-                    <option value="" disabled selected>Produto</option>
-                    <option value="1">Abacaxi</option>
-                </select>
-                <label>Produto</label>
+            <h5> Condições de Armazenamento e Manuseio </h5>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="NumPessoas" type="text" class="validate">
+                    <label for="NumPessoas">Número de Pessoas</label>
+                </div>
             </div>
         
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Densidade de Armazenamento</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="DensidadeDeArmazenamento" type="text" class="validate">
+                    <input id="TempPermPessoas" type="text" class="validate">
+                    <label for="TempPermPessoas">Tempo de Permanência das Pessoas</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Temperatura de Congelamento do Produto</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="TemperaturaDeCongelamento" type="text" class="validate">
+                    <input id="TempIlumina" type="text" class="validate">
+                    <label for="PotIlumina">Potência de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Específico do Produto não Congelado</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorEspeNaoConge" type="text" class="validate">
+                    <input id="TempIlumina" type="text" class="validate">
+                    <label for="TempIlumina">Tempo de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Específico do Produto Congelado</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorEspeConge" type="text" class="validate">
+                    <input id="PotMotores" type="text" class="validate">
+                    <label for="PotMotores">Potência de Motores(exceto dos evaporadores)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Latente de Congelamento</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorLatConge" type="text" class="validate">
+                    <input id="PotMotores" type="text" class="validate">
+                    <label for="PotMotores">Potência de Motores(exceto dos evaporadores)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor de Respiração</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CarlorRespiracao" type="text" class="validate">
+                    <input id="TempOpeMotores" type="text" class="validate">
+                    <label for="TempOpeMotores">Tempo de Operação dos Motores</label>
                 </div>
             </div>   
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaTotalArma" type="text" class="validate">
-                    <label for="MassaTotalArma">Massa Total de Produto Armazenado</label>
+                    <input id="FatSeguranca" type="text" class="validate">
+                    <label for="FatSeguranca">Fator de Segurança</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaProdMov" type="text" class="validate">
-                    <label for="MassaProdMov">Massa de Produto em Movimento</label>
+                    <input id="TempOpeCompre" type="text" class="validate">
+                    <label for="TempOpeCompre">Tempo de Operação do Compressor</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempResfCongProd" type="text" class="validate">
-                    <label class="input-field col s12" for="TempResfCongProd">Tempo de Resfriamento e/ou Congelamento do Produto</label>
+                    <input id="TempOpeCompre" type="text" class="validate">
+                    <label for="TempOpeCompre">Tempo de Operação do Compressor</label>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="TempEntrada" type="text" class="validate">
-                    <label for="TempEntrada">Temperatura de Entrada do Produto</label>
-                </div>
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">32</option>
+                    <option value="2">35</option>
+                    <option value="3">43</option>
+                </select>
+                <label>Fluido Refrigerante</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">6</option>
+                    <option value="2">8</option>
+                    <option value="3">10</option>
+                    <option value="3">Outros</option>
+                </select>
+                <label>Diferencial de Temperatura de Evaporação</label>
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="index.html">VOLTAR</a>
+                <a class="waves-effect waves-light btn" href="segunda.html">VOLTAR</a>
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="terceira.html">AVANÇAR</a>
+                <a class="waves-effect waves-light btn" href="result.html">AVANÇAR</a>
             </div>
         </form>
 

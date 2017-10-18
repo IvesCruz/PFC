@@ -34,7 +34,7 @@
             <img class="responsive-img" src="imagens/logo.png">
         </header>
 
-        <form class="col s12">
+        <form class="col s12" action="terceira.html" method="post" name="dados" onSubmit="return validacao();">
             <h5> Características do produto a ser armazenado </h5>
             <div class="input-field col s12">
                 <select>
@@ -100,28 +100,28 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaTotalArma" type="text" class="validate">
+                    <input id="MassaTotalArma" name="tx_MassaTotalArma" type="text" class="validate">
                     <label for="MassaTotalArma">Massa Total de Produto Armazenado</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaProdMov" type="text" class="validate">
+                    <input id="MassaProdMov" name="tx_MassaProdMov" type="text" class="validate">
                     <label for="MassaProdMov">Massa de Produto em Movimento</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempResfCongProd" type="text" class="validate">
+                    <input id="TempResfCongProd" name="tx_TempResfCongProd" type="text" class="validate">
                     <label class="input-field col s12" for="TempResfCongProd">Tempo de Resfriamento e/ou Congelamento do Produto</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempEntrada" type="text" class="validate">
+                    <input id="TempEntrada" name="tx_TempEntrada" type="text" class="validate">
                     <label for="TempEntrada">Temperatura de Entrada do Produto</label>
                 </div>
             </div>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="terceira.html">AVANÇAR</a>
+                <input class="waves-effect waves-light btn" type="submit" name="submit" value="AVANÇAR">
             </div>
         </form>
 

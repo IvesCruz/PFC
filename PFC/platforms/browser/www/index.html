@@ -34,39 +34,50 @@
             <img class="responsive-img" src="imagens/logo.png">
         </header>
 
-        <form class="col s12">
+        <form class="col s12" action="segunda.html" method="post" name="dados" onSubmit="return validacao();">
             <h5> Características do local de armazenagem </h5>
+
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="NomeCli" type="text" class="validate">
+                    <label id="Data">Data Atual: </label>
+                    <br>
+                </div>
+                <div class="input-field col s12">
+                    <input disabled id="DataAtual" type="text" class="validate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="NomeCli" name="tx_nome" type="text" class="validate">
                     <label for="Nome_Cli">Nome do Cliente</label>
                 </div>
             </div>
         
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="Obra" type="text" class="validate">
+                    <input id="Obra" name="tx_obra" type="text" class="validate">
                     <label for="Obra">Obra</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="Comprimento" type="text" class="validate">
+                    <input id="Comprimento" name="tx_comprimento" type="text" class="validate">
                     <label for="Comprimento">Comprimento</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="Largura" type="text" class="validate">
+                    <input id="Largura" name="tx_largura" type="text" class="validate">
                     <label for="Largura">Largura</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="Altura" type="text" class="validate">
+                    <input id="Altura" name="tx_altura" type="text" class="validate">
                     <label for="Altura">Altura</label>
                 </div>
             </div>
@@ -91,61 +102,58 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempInterna" type="text" class="validate">
+                    <input id="TempInterna" name="tx_TempInterna" type="text" class="validate">
                     <label for="TempInterna">Temperatura Interna</label>
                 </div>
             </div>
-
+            
             <div class="input-field col s12">
-                <select class="icons">
-                    <option value="" disabled selected>Escolha sua Opção</option>
-                    <option value="" data-icon="imagens/isopor1.jpg" class="circle">Poliestireno / Isopor</option>
-                    <option value="" data-icon="imagens/poliuretano.png" class="circle">Poliuretano</option>
-                    <option value="" data-icon="imagens/Icon_outros.png" class="circle">Outros</option>
+                <select id="mySelect">
+                    <option disabled selected>Escolha sua Opção</option>
+                    <option>Poliestireno / Isopor</option>
+                    <option>Poliuretano</option>
+                    <option>Outros</option>
                 </select>
-                <label>Selecione uma Opção</label>
+                <label>Tipo de Isolamento</label>
             </div>
-
+        
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="areaDoPiso">Condutividade Térmica</label>
+                    <label id="labelOculto">Condutividade Térmica do Isolamento</label>
                 </div>
-                <div class="input-field col s12">
-                    <input disabled id="CondutividadeTérmica" type="text" class="validate">
+                <div id="inputOculto" class="input-field col s12">
+                    <input id="ConduTermi" name="tx_ConduTermi" type="text" class="validate">
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="EspessuraIsolamento" type="text" class="validate">
+                    <input id="EspessuraIsolamento" name="tx_EspessuraIsolamento" type="text" class="validate">
                     <label for="EspessuraIsolamento">Espessura do Isolamento</label>
                 </div>
             </div>
 
-            <div class="input-field col s12">
-                <select>
-                    <option value="" disabled selected>Temperatura Externa</option>
-                    <option value="1">32</option>
-                    <option value="2">35</option>
-                    <option value="3">43</option>
-                </select>
-                <label>Temperatura Externa</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="TempExterna" name="tx_TempExterna" type="text" class="validate">
+                    <label for="TempExterna">Temperatura Externa</label>
+                </div>
             </div>
 
-            <div class="input-field col s12">
-                <select>
-                    <option value="" disabled selected>Frequência</option>
-                    <option value="1">50</option>
-                    <option value="2">60</option>
-                </select>
-                <label>Frequência</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="Frequencia" name="tx_Frequencia" type="text" class="validate">
+                    <label for="Frequencia">Frequência</label>
+                </div>
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="segunda.html">AVANÇAR</a>
+                <input class="waves-effect waves-light btn" type="submit" name="submit" value="AVANÇAR">
             </div>
         </form>
-
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <!-- SELECT -->

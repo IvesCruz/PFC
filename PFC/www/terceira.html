@@ -34,74 +34,61 @@
             <img class="responsive-img" src="imagens/logo.png">
         </header>
 
-        <form class="col s12">
+        <form class="col s12" action="result.html" method="post" name="dados" onSubmit="return validacao();">
             <h5> Condições de Armazenamento e Manuseio </h5>
+
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="NumPessoas" type="text" class="validate">
+                    <input id="NumPessoas" name="tx_NumPessoas" type="text" class="validate">
                     <label for="NumPessoas">Número de Pessoas</label>
                 </div>
             </div>
         
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempPermPessoas" type="text" class="validate">
+                    <input id="TempPermPessoas" name="tx_TempPermPessoas" type="text" class="validate">
                     <label for="TempPermPessoas">Tempo de Permanência das Pessoas</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempIlumina" type="text" class="validate">
+                    <input id="PotIlumina" name="tx_PotIlumina" type="text" class="validate">
                     <label for="PotIlumina">Potência de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempIlumina" type="text" class="validate">
+                    <input id="TempIlumina" name="tx_TempIlumina" type="text" class="validate">
                     <label for="TempIlumina">Tempo de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="PotMotores" type="text" class="validate">
+                    <input id="PotMotores" name="tx_PotMotores" type="text" class="validate">
                     <label for="PotMotores">Potência de Motores(exceto dos evaporadores)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="PotMotores" type="text" class="validate">
-                    <label for="PotMotores">Potência de Motores(exceto dos evaporadores)</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="TempOpeMotores" type="text" class="validate">
+                    <input id="TempOpeMotores" name="tx_TempOpeMotores" type="text" class="validate">
                     <label for="TempOpeMotores">Tempo de Operação dos Motores</label>
                 </div>
             </div>   
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="FatSeguranca" type="text" class="validate">
+                    <input id="FatSeguranca" name="tx_FatSeguranca" type="text" class="validate">
                     <label for="FatSeguranca">Fator de Segurança</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="TempOpeCompre" type="text" class="validate">
-                    <label for="TempOpeCompre">Tempo de Operação do Compressor</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="TempOpeCompre" type="text" class="validate">
+                    <input id="TempOpeCompre" name="tx_TempOpeCompre" type="text" class="validate">
                     <label for="TempOpeCompre">Tempo de Operação do Compressor</label>
                 </div>
             </div>
@@ -132,7 +119,7 @@
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="result.html">AVANÇAR</a>
+                <input class="waves-effect waves-light btn" type="submit" name="submit" value="AVANÇAR">
             </div>
         </form>
 
