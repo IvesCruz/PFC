@@ -21,6 +21,15 @@ $(document).ready(function() {
   }); 
 });
 
+function calcular(){
+	var Comprimento = document.getElementById("Comprimento").value 
+	var Largura = document.getElementById("Largura").value
+	
+	Area = Comprimento * Largura;
+ 	
+ 	$('#areaDoPiso').val(Area);
+}
+
 function validacao(){
 	//nome
 	if(document.dados.tx_nome.value == ""){
@@ -79,7 +88,8 @@ function validacao(){
 		document.dados.tx_TempInterna.focus();
 		return false;
 	}
-
+/**
+	if()
 	//Condutividade Térmica
 	if (document.dados.tx_ConduTermi.value == ""){
 		alert("Preencha o campo CONDUTIVIDADE TÉRMICA.")
@@ -90,6 +100,7 @@ function validacao(){
 		document.dados.tx_ConduTermi.focus();
 		return false;
 	}
+**/
 
 	//Espessura Isolamento
 	if (document.dados.tx_EspessuraIsolamento.value == ""){
