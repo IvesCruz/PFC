@@ -21,13 +21,46 @@ $(document).ready(function() {
   }); 
 });
 
+function teste(){
+	const produtos = [
+		{
+			nome: "abacaxi",
+
+		}
+	]
+}
+
 function calcular(){
-	var Comprimento = document.getElementById("Comprimento").value 
-	var Largura = document.getElementById("Largura").value
+
+	//Primeira Página
+	//var comprimento = document.getElementById("Comprimento").value 
+	//var largura = document.getElementById("Largura").value
+	var comprimento = $("[name='tx_comprimento']").val();
+	var largura = $("[name='tx_largura']").val();
+	var altura = $("[name='tx_altura']").val();
+	var tempInterna = $("[name='tx_TempInterna']").val();
+	var conduTermi = $("[name='tx_ConduTermi']").val();
+	var espessuraIsolamento = $("[name='tx_EspessuraIsolamento']").val();
+	var tempExterna = $("[name='tx_TempExterna']").val();
+	var frequencia = $("[name='tx_Frequencia']").val();
 	
-	Area = Comprimento * Largura;
- 	
- 	$('#areaDoPiso').val(Area);
+
+	//Primeira Página
+	//window.localStorage.setItem("tx_comprimento", comprimento);
+	window.localStorage['tx_comprimento'] = comprimento;
+	window.localStorage['tx_largura'] = largura;
+	window.localStorage['tx_altura'] = altura;
+	window.localStorage['tx_TempInterna'] = tempInterna;
+	window.localStorage['tx_ConduTermi'] = conduTermi;
+	window.localStorage['tx_EspessuraIsolamento'] = espessuraIsolamento;
+	window.localStorage['tx_TempExterna'] = tempExterna;
+	window.localStorage['tx_Frequencia'] = frequencia;
+
+	volume = (comprimento * largura) * altura;
+	area = comprimento * largura;
+
+ 	$('#areaDoPiso').val(area);
+ 	$('#volume').val(volume);
 }
 
 function validacao(){
@@ -135,7 +168,7 @@ function validacao(){
 		return false;
 	}
 
-	//SEGUNDA PAGE
+	////////////////////////////SEGUNDA PAGE///////////////////////////////////////////////
 	//Massa Total de Produto Armazenado
 	if (document.dados.tx_MassaTotalArma.value == ""){
 		alert("Preencha o campo MASSA TOTAL DE PRODUTO ARMAZENADO.")
@@ -180,7 +213,7 @@ function validacao(){
 		return false;
 	}
 
-	//TERCEIRA PÁGINA 
+	////////////////////////////////TERCEIRA PÁGINA/////////////////////////////////
 	//Numero de Pessoas 
 	if (document.dados.tx_NumPessoas.value == ""){
 		alert("Preencha o campo NÚMERO DE PESSOAS.")

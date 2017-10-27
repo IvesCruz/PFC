@@ -33,107 +33,461 @@
         <header class="col s12">
             <img class="responsive-img" src="imagens/logo.png">
         </header>
-
         <form class="col s12" action="terceira.html" method="post" name="dados" onSubmit="return validacao();">
-            <h5> Características do produto a ser armazenado </h5>
-            <div class="input-field col s12">
-                <select>
-                    <option value="" disabled selected>Produto</option>
-                    <option value="1">Abacaxi</option>
-                </select>
-                <label>Produto</label>
+
+            <ul id="tabs-swipe-demo" class="tabs">
+                <li class="tab col s3"><a href="#test-swipe-1" class="active">Test 1</a></li>
+                <li class="tab col s3"><a href="#test-swipe-2">Test 2</a></li>
+                <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+              </ul>
+              <div id="test-swipe-1" class="col s12">
+                   <h5> Características do local de armazenagem </h5>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label id="Data">Data Atual: </label>
+                            <br>
+                        </div>
+                        <div class="input-field col s12">
+                            <input disabled id="DataAtual" type="text" class="validate" style="background-color:#bdbdbd;padding-left: 10px;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="NomeCli" name="tx_nome" type="text" class="validate">
+                            <label for="Nome_Cli">Nome do Cliente</label>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Obra" name="tx_obra" type="text" class="validate">
+                            <label for="Obra">Obra</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Comprimento" name="tx_comprimento" type="number" class="validate" onblur="calcular()">
+                            <label for="Comprimento">Comprimento</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Largura" name="tx_largura" type="number" class="validate" onblur="calcular()">
+                            <label for="Largura">Largura</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Altura" name="tx_altura" type="number" class="validate" onblur="calcular()">
+                            <label for="Altura">Altura</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="volume">Volume</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input disabled id="volume" type="text" class="validate" style="background-color:#bdbdbd;padding-left: 10px;">
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="areaDoPiso">Área do Piso</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input disabled id="areaDoPiso" type="text" class="validate" style="background-color:#bdbdbd;padding-left: 10px;">
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="TempInterna" name="tx_TempInterna" type="number" class="validate">
+                            <label for="TempInterna">Temperatura Interna</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-field col s12">
+                        <select id="mySelect">
+                            <option disabled selected>Escolha sua Opção</option>
+                            <option>Poliestireno / Isopor</option>
+                            <option>Poliuretano</option>
+                            <option>Outros</option>
+                        </select>
+                        <label>Tipo de Isolamento</label>
+                    </div>
+                
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label id="labelOculto">Condutividade Térmica do Isolamento</label>
+                        </div>
+                        <div id="inputOculto" class="input-field col s12">
+                            <input id="ConduTermi" name="tx_ConduTermi" type="text" class="validate">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="EspessuraIsolamento" name="tx_EspessuraIsolamento" type="number" class="validate">
+                            <label for="EspessuraIsolamento">Espessura do Isolamento</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="TempExterna" name="tx_TempExterna" type="number" class="validate">
+                            <label for="TempExterna">Temperatura Externa</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="Frequencia" name="tx_Frequencia" type="number" class="validate">
+                            <label for="Frequencia">Frequência</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field col sm 12">
+                        <a href="#test-swipe-2" class="waves-effect waves-light btn">AVANÇAR</a>
+                    </div>
+              </div>
+              <div id="test-swipe-2" class="col s12">
+                <h5> Características do produto a ser armazenado </h5>
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Produto</option>
+                        <option value="1">Outros</option>
+                        <option value="2">Abacate</option>
+                        <option value="3">Abacaxi</option>
+                        <option value="4">Abóbora</option>
+                        <option value="5">Açaí(polpa)</option>
+                        <option value="6">Acerola</option>
+                        <option value="7">Açúcar cristalizado</option>
+                        <option value="8">Água/Gelo</option>
+                        <option value="9">Aipo(salsão)</option>
+                        <option value="10">Alcachofra</option>
+                        <option value="11">Alface</option>
+                        <option value="12">Alho porro curado</option>
+                        <option value="13">Alho seco</option>
+                        <option value="14">Ameixa fresca</option>
+                        <option value="15">Amora preta</option>
+                        <option value="16">Aspargo</option>
+                        <option value="17">Azeitona</option>
+                        <option value="18">Bacon defumado</option>
+                        <option value="19">Banana</option>
+                        <option value="20">Batata doce</option>
+                        <option value="21">Batata precoce</option>
+                        <option value="22">Batata semente</option>
+                        <option value="23">Bebidas destiladas</option>
+                        <option value="24">Beringela</option>
+                        <option value="25">Beterraba</option>
+                        <option value="26">Brocoli</option>
+                        <option value="27">Cabrito fresco</option>
+                        <option value="28">Cadáver</option>
+                        <option value="29">Café verde</option>
+                        <option value="30">Camarão</option>
+                        <option value="31">Caqui</option>
+                        <option value="32">Carne bovina</option>
+                        <option value="33">Carne cozida</option>
+                        <option value="34">Carne de coelho</option>
+                        <option value="35">Carne suína fresca</option>
+                        <option value="36">Cebola</option>
+                        <option value="37">Cenoura</option>
+                        <option value="38">Cereja</option>
+                        <option value="39">Cerveja(garrafa ou lata)</option>
+                        <option value="40">Chocolate(cobertura)</option>
+                        <option value="41">Chopp(barril)</option>
+                        <option value="42">Coco</option>
+                        <option value="43">Cogumelo</option>
+                        <option value="44">Congelados</option>
+                        <option value="45">Couve de bruxelas</option>
+                        <option value="46">Couve flor</option>
+                        <option value="47">Creme de leite</option>
+                        <option value="48">Damasco</option>
+                        <option value="49">Doces em geral</option>
+                        <option value="50">Endívia</option>
+                        <option value="51">Ervilha verde</option>
+                        <option value="52">Escarola</option>
+                        <option value="53">Espinafre</option>
+                        <option value="54">Feijão</option>
+                        <option value="55">Fermento</option>
+                        <option value="56">Fígado</option>
+                        <option value="57">Figo fresco</option>
+                        <option value="58">Franboesa</option>
+                        <option value="59">Frango</option>
+                        <option value="60">Frutas</option>
+                        <option value="61">Frutas frescas</option>
+                        <option value="62">Ganso fresco</option>
+                        <option value="63">Goiaba</option>
+                        <option value="64">Groselha</option>
+                        <option value="65">Lagosta</option>
+                        <option value="66">Laranja</option>
+                        <option value="67">Laticínios</option>
+                        <option value="68">Leite</option>
+                        <option value="69">Leite condensado</option>
+                        <option value="70">Lima</option>
+                        <option value="71">Limão</option>
+                        <option value="72">Linguiça defumada</option>
+                        <option value="73">Linguiça fresca</option>
+                        <option value="74">Lixo</option>
+                        <option value="75">Maçã</option>
+                        <option value="76">Mamão</option>
+                        <option value="77">Manga</option>
+                        <option value="78">Manteiga</option>
+                        <option value="79">Margarina</option>
+                        <option value="80">Marmelo</option>
+                        <option value="81">Mel</option>
+                        <option value="82">Melaço</option>
+                        <option value="83">Melancia</option>
+                        <option value="84">Melão</option>
+                        <option value="85">Milho de pipoca</option>
+                        <option value="86">Milho verde</option>
+                        <option value="87">Miúdos</option>
+                        <option value="88">Molusco fresco</option>
+                        <option value="89">Morango</option>
+                        <option value="90">Nabo</option>
+                        <option value="91">Nata</option>
+                        <option value="92">Nectarina</option>
+                        <option value="93">Nozes</option>
+                        <option value="94">Óleo vegetal</option>
+                        <option value="95">Ostra</option>
+                        <option value="96">Ovo(em casca)</option>
+                        <option value="97">Ovo(líquido)</option>
+                        <option value="98">Ovo(resfriado)</option>
+                        <option value="99">Pão assado</option>
+                        <option value="100">Pão de queijo</option>
+                        <option value="101">Pão(massa)</option>
+                        <option value="102">Peixe defumado</option>
+                        <option value="103">Peixe fresco</option>
+                        <option value="104">Pepino</option>
+                        <option value="105">Pera</option>
+                        <option value="106">Peru fresco</option>
+                        <option value="107">Pimenta doce</option>
+                        <option value="108">Pimenta malagueta</option>
+                        <option value="109">Pimenta seca</option>
+                        <option value="110">Pimentão</option>
+                        <option value="111">Polpa de fruta</option>
+                        <option value="112">Presunto e pernil defumado</option>
+                        <option value="113">Presunto e pernil fresco</option>
+                        <option value="114">Queijo processado</option>
+                        <option value="115">Quiabo</option>
+                        <option value="116">Rabanete</option>
+                        <option value="117">Rabanete picante</option>
+                        <option value="118">Resfriados</option>
+                        <option value="119">Roma</option>
+                        <option value="120">Salsicharia</option>
+                        <option value="121">Salsinha</option>
+                        <option value="122">Sangue</option>
+                        <option value="123">Sorvete(massa)</option>
+                        <option value="124">Suco de laranja fresco</option>
+                        <option value="125">Tâmara seca</option>
+                        <option value="126">Tangerina</option>
+                        <option value="127">Tomate verde</option>
+                        <option value="128">Tomate vermelho</option>
+                        <option value="129">Toranja/Pomelo</option>
+                        <option value="130">Uva seca</option>
+                        <option value="131">Uva americana</option>
+                        <option value="132">Uva européia</option>
+                        <option value="133">Vacina</option>
+                        <option value="134">Vagem</option>
+                        <option value="135">Verduras</option>
+                        <option value="136">Vinho</option>
+                        <option value="137">Vitela fresca</option>
+                    </select>
+                    <label>Produto</label>
+                </div>
+            
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Densidade de Armazenamento</label>
+                    </div>
+                </div>
+                    <div class="input-field col s12">
+                        <input disabled id="DensidadeDeArmazenamento" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+                
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Temperatura de Congelamento do Produto</label>
+                    </div>
+                </div> 
+                    <div class="input-field col s12">
+                        <input disabled id="TemperaturaDeCongelamento" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Calor Específico do Produto não Congelado</label>
+                    </div>
+                </div>
+                    <div class="input-field col s12">
+                        <input disabled id="CalorEspeNaoConge" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Calor Específico do Produto Congelado</label>
+                    </div>
+                </div>
+                    <div class="input-field col s12">
+                        <input disabled id="CalorEspeConge" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Calor Latente de Congelamento</label>
+                    </div>
+                </div>
+                    <div class="input-field col s12">
+                        <input disabled id="CalorLatConge" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="volume">Calor de Respiração</label>
+                    </div>
+                </div>
+                    <div class="input-field col s12">
+                        <input disabled id="CarlorRespiracao" type="text" style="background-color:#bdbdbd;padding-left: 10px;" class="validate">
+                    </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="MassaTotalArma" name="tx_MassaTotalArma" type="number" class="validate">
+                        <label for="MassaTotalArma">Massa Total de Produto Armazenado</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="MassaProdMov" name="tx_MassaProdMov" type="number" class="validate">
+                        <label for="MassaProdMov">Massa de Produto em Movimento</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="TempResfCongProd" name="tx_TempResfCongProd" type="number" class="validate">
+                        <label class="input-field col s12" for="TempResfCongProd">Tempo de Resfriamento e/ou Congelamento do Produto</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="TempEntrada" name="tx_TempEntrada" type="number" class="validate">
+                        <label for="TempEntrada">Temperatura de Entrada do Produto</label>
+                    </div>
+                </div>
+
+                <div class="input-field col sm 12">
+                    <a class="waves-effect waves-light btn" href="index.html">VOLTAR</a>
+                </div>
+
+                <div class="input-field col sm 12">
+                    <input class="waves-effect waves-light btn" type="submit" name="submit" value="AVANÇAR">
+                </div>
+            
+              </div>
+              <div id="test-swipe-3" class="col s12">
+                <h5> Condições de Armazenamento e Manuseio </h5>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="NumPessoas" name="tx_NumPessoas" type="number" class="validate">
+                    <label for="NumPessoas">Número de Pessoas</label>
+                </div>
             </div>
         
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Densidade de Armazenamento</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="DensidadeDeArmazenamento" type="text" class="validate">
+                    <input id="TempPermPessoas" name="tx_TempPermPessoas" type="number" class="validate">
+                    <label for="TempPermPessoas">Tempo de Permanência das Pessoas</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Temperatura de Congelamento do Produto</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="TemperaturaDeCongelamento" type="text" class="validate">
+                    <input id="PotIlumina" name="tx_PotIlumina" type="number" class="validate">
+                    <label for="PotIlumina">Potência de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Específico do Produto não Congelado</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorEspeNaoConge" type="text" class="validate">
+                    <input id="TempIlumina" name="tx_TempIlumina" type="number" class="validate">
+                    <label for="TempIlumina">Tempo de Iluminação</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Específico do Produto Congelado</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorEspeConge" type="text" class="validate">
+                    <input id="PotMotores" name="tx_PotMotores" type="number" class="validate">
+                    <label for="PotMotores">Potência de Motores(exceto dos evaporadores)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <label for="volume">Calor Latente de Congelamento</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CalorLatConge" type="text" class="validate">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <label for="volume">Calor de Respiração</label>
-                </div>
-                <div class="input-field col s12">
-                    <input disabled id="CarlorRespiracao" type="text" class="validate">
+                    <input id="TempOpeMotores" name="tx_TempOpeMotores" type="number" class="validate">
+                    <label for="TempOpeMotores">Tempo de Operação dos Motores</label>
                 </div>
             </div>   
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaTotalArma" name="tx_MassaTotalArma" type="text" class="validate">
-                    <label for="MassaTotalArma">Massa Total de Produto Armazenado</label>
+                    <input id="FatSeguranca" name="tx_FatSeguranca" type="number" class="validate">
+                    <label for="FatSeguranca">Fator de Segurança</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="MassaProdMov" name="tx_MassaProdMov" type="text" class="validate">
-                    <label for="MassaProdMov">Massa de Produto em Movimento</label>
+                    <input id="TempOpeCompre" name="tx_TempOpeCompre" type="text" class="validate">
+                    <label for="TempOpeCompre">Tempo de Operação do Compressor</label>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="TempResfCongProd" name="tx_TempResfCongProd" type="text" class="validate">
-                    <label class="input-field col s12" for="TempResfCongProd">Tempo de Resfriamento e/ou Congelamento do Produto</label>
-                </div>
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">32</option>
+                    <option value="2">35</option>
+                    <option value="3">43</option>
+                </select>
+                <label>Fluido Refrigerante</label>
             </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="TempEntrada" name="tx_TempEntrada" type="text" class="validate">
-                    <label for="TempEntrada">Temperatura de Entrada do Produto</label>
-                </div>
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">6</option>
+                    <option value="2">8</option>
+                    <option value="3">10</option>
+                    <option value="3">Outros</option>
+                </select>
+                <label>Diferencial de Temperatura de Evaporação</label>
             </div>
 
             <div class="input-field col sm 12">
-                <a class="waves-effect waves-light btn" href="index.html">VOLTAR</a>
+                <a class="waves-effect waves-light btn" href="segunda.html">VOLTAR</a>
             </div>
 
             <div class="input-field col sm 12">
                 <input class="waves-effect waves-light btn" type="submit" name="submit" value="AVANÇAR">
             </div>
+              </div>
         </form>
+        
 
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
