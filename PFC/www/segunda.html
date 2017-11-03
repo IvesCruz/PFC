@@ -33,13 +33,13 @@
         <header class="col s12">
             <img class="responsive-img" src="imagens/logo.png">
         </header>
-        <form class="col s12" action="terceira.html" method="post" name="dados" onSubmit="return validacao();">
+        <form class="col s12" name="dados" onSubmit="return validacao();">
 
             <ul id="tabs-swipe-demo" class="tabs">
                 <li class="tab col s3"><a href="#test-swipe-1" class="active">Test 1</a></li>
                 <li class="tab col s3"><a href="#test-swipe-2">Test 2</a></li>
                 <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
-              </ul>
+            </ul> 
               <div id="test-swipe-1" class="col s12">
                    <h5> Características do local de armazenagem </h5>
 
@@ -489,13 +489,17 @@
         </form>
         
 
-<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <!-- SELECT -->
 <script>
     $(document).ready(function() {
-    $('select').material_select();
+        $('select').material_select();
+        $('ul.tabs').tabs({
+            swipeable : true,
+            responsiveThreshold : 1920
+        });
   });
 </script>
 </body>

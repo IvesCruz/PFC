@@ -22,9 +22,19 @@ $(document).ready(function() {
 });
 
 function teste(){
+	
 	const produtos = [
 		{
-			nome: "abacaxi",
+			nome: "Abacate",
+			densidade_de_armazenamento: "330",
+			temperatura_de_congelamento_do_produto: "-0.70",
+			calor_especifico_do_produto_nao_congelado: "0.790",
+			calor_especifico_do_produto_congelado: "0.400",
+			calor_latente_de_congelamento: "52",
+			calor_de_respiracao: "3600"
+		},
+
+		{
 
 		}
 	]
